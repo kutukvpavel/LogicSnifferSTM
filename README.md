@@ -28,8 +28,17 @@ Software capabilities:
  - Parsing OneWire protocol
  - New parsers can be added easilly
  - Parsed info output is also designed to be human-readable
+ - Load simulation data from Proteus ISIS (by Labcenter Electronics)
  
 Software requirements: .NET 4.5.2, VisualMicro visual studio plugin with STM32 core installed.
+
+Projects in the solution:
+ - DataConsoleHelper = OneWire parser (it's a command-line app, but DataPlotter provides some GUI for it)
+ - DataPlotter = Main app, dumps data from the device, plots it and invokes parsers
+ - LogicSnifferSTM = firmware
+ - ProteusDataConverter = converts Proteus ISIS simulation data (exported) into LogicSnifferSTM format
+ - SquareWaveGen = quick and dirty test for system bandwidth (arduino as a crude freqency generator)
+ - TimerTest = some stuff for debug purposes
  
 Examples:
 https://imgur.com/a/sn2cK5r
