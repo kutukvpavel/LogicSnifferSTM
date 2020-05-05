@@ -4,7 +4,7 @@ STM32 BluePill-based logic analyzer with OneWire protocol parser (and extendable
 Hadrware capabilities:
 
  - Acquisition: 1MSa/s, i.e. maximum signal frequency is 500kHz and resolution is 1uS, which is fine for OneWire. Can be improved using ARM inline assembler for aquisition code.
- - Trigger: techniacally, any edge, but see Memory.
+ - Trigger: technically, any edge, but see Memory.
  - Accuracy: depends on quality of the crystal oscillator/resonator used on the board. For debugging OneWire any BluePill is okay, however for precision applications calibration against a known good frequency source is essential.
  - Memory: 2560 edges (default). The instument stores waveforms as edges (uint32 timestamp + bool edge sign). Bitwise operations are avoided for the sake of acquisition speed. You could push some more edges in (currently only about 3/4 of RAM is reserved for storage). The memory is, of course, volatile, therefore you can't power the device down until you dump the data to a PC.
 
