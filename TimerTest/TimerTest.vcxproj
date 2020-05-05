@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C2225FE5-5CC0-4AC8-8154-D06749C5B321}</ProjectGuid>
+    <RootNamespace>TimerTest</RootNamespace>
+    <ProjectName>TimerTest</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\TimerTest;C:\arduino-1.8.5\libraries;$(ProjectDir)..\..\..\..\arduino\libraries;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\libraries;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\cores\maple;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\cores\maple\avr;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\cores\maple\libmaple;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\cores\maple\stm32f1;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\variants\generic_stm32f103c;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\system\libmaple;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\system\libmaple\include;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\system\libmaple\stm32f1\include;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\system\libmaple\usb\stm32f1;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32\STM32F1\system\libmaple\usb\usb_lib;$(ProjectDir)..\..\..\..\arduino\hardware\Arduino_STM32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.TimerTest.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>DEBUG_LEVEL=DEBUG_FAULT;BOARD_generic_stm32f103c;VECT_TAB_ADDR=0x8002000;ERROR_LED_PORT=GPIOC;ERROR_LED_PIN=13;F_CPU=72000000L;ARDUINO=10805;ARDUINO_GENERIC_STM32F103C;ARDUINO_ARCH_STM32F1;SERIAL_USB;GENERIC_BOOTLOADER;MCU_STM32F103C8;__STM32F1__;ARDUINO_ARCH_STM32;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="VisualMicro" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="TimerTest.ino">
+      <FileType>CppCode</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.TimerTest.vsarduino.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties custom_Arduino_STM32_genericSTM32F103C_opt="o2lto" arduino.upload.port="COM29" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
