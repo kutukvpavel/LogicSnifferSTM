@@ -39,6 +39,7 @@ Projects in the solution:
  - ProteusDataConverter = converts Proteus ISIS simulation data (exported) into LogicSnifferSTM format
  - SquareWaveGen = quick and dirty test for system bandwidth (arduino as a crude freqency generator)
  - TimerTest = some stuff for debug purposes
+ - DataVisualizer = canceled WPF port
  
 Examples:
 https://imgur.com/a/sn2cK5r
